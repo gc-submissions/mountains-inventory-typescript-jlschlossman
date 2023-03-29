@@ -29,4 +29,7 @@ function findNameOfTallestMountain(array: Mountain[]) {
     return highestMountain.name
 }
 
-console.log(findNameOfTallestMountain(mountains));
+const theHighestMountain = findNameOfTallestMountain(mountains)
+console.log(theHighestMountain);
+
+//export??
