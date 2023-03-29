@@ -3,7 +3,7 @@ interface Mountain {
     height: number;
 }
 
-const mountains: Mountain = [
+const mountains: Mountain[] = [
     {
         name: "Kilimanjaro",
         height: 19341
@@ -15,5 +15,18 @@ const mountains: Mountain = [
     {
         name: "Denali",
         height: 20310
-    }
-]
+    }];
+
+//functions
+
+function findNameOfTallestMountain(array: Mountain[]) {
+    let highestMountain = array[0];
+    array.forEach(mountain => {
+        if (mountain.height > highestMountain.height) {
+            highestMountain = mountain;
+        }
+    });
+    return highestMountain;
+}
+
+console.log(findNameOfTallestMountain(mountains))
