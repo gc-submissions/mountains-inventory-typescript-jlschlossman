@@ -26,7 +26,7 @@ function findNameOfTallestMountain(array: Mountain[]) {
             highestMountain = mountain;
         }
     });
-    return highestMountain;
+    return highestMountain.name
 }
 
-console.log(findNameOfTallestMountain(mountains))
+console.log(findNameOfTallestMountain(mountains));
