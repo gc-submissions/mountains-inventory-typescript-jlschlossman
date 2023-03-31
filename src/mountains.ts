@@ -1,4 +1,4 @@
-interface Mountain {
+export interface Mountain {
     name: string;
     height: number;
 }
@@ -19,7 +19,7 @@ const mountains: Mountain[] = [
 
 //functions
 
-function findNameOfTallestMountain(array: Mountain[]) {
+export function findNameOfTallestMountain(array: Mountain[]) {
     let highestMountain = array[0];
     array.forEach(mountain => {
         if (mountain.height > highestMountain.height) {
@@ -29,7 +29,22 @@ function findNameOfTallestMountain(array: Mountain[]) {
     return highestMountain.name
 }
 
+// function findNameOfTallestMountain(array: Mountain[]): string {
+//     let highestMountain: Mountain = array[0];
+
+//     for (let mountain of mountains) {
+//         if (mountain.height > highestMountain.height) {
+//             highestMountain = mountain;
+//         }
+//     }
+
+//     return highestMountain.name;
+
+
+
 const theHighestMountain = findNameOfTallestMountain(mountains)
 console.log(theHighestMountain);
 
 //export??
+
+// module.exports = { interface Mountain, findNameOfTallestMountain }
